@@ -2,7 +2,7 @@
  * Created by Guillaume on 8/13/16.
  */
 
-var MIN_NUMBER_OF_LIKES = 10;
+var MIN_NUMBER_OF_LIKES = 1;
 
 // Minimum size of the nodes so we can see them.
 var NODE_MIN_SIZE = 2;
@@ -190,7 +190,7 @@ function ticked() {
         });
 
     node
-        .attr("r", function(d) { return Math.pow(d.views, 0.25) * NODE_MIN_SIZE})
+        .attr("r", function(d) { return Math.pow(d.views, 0.4) * NODE_MIN_SIZE})
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; })
 //        .style("opacity", function(d) {return videos[d.id].accessibility})
