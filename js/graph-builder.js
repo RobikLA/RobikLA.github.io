@@ -5,7 +5,7 @@
 var MIN_NUMBER_OF_LIKES = 1;
 
 // Minimum size of the nodes so we can see them.
-var NODE_MIN_SIZE = 1;
+var NODE_MIN_SIZE = 5;
 var videos = {};
 var video_list = [];
 var node, link;
