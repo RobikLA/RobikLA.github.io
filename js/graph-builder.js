@@ -5,7 +5,7 @@
 var MIN_NUMBER_OF_LIKES = 1;
 
 // Minimum size of the nodes so we can see them.
-var NODE_MIN_SIZE = 5;
+var NODE_MIN_SIZE = 10;
 var videos = {};
 var video_list = [];
 var node, link;
@@ -74,7 +74,7 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 function get_size(d) {
-    return parseInt(d.size);
+    return parseInt(1000 * Math.sqrt(d.views));
 }
 
 function get_color(d) {
@@ -190,7 +190,7 @@ function ticked() {
         });
 
     node
-        .attr("r", function(d) { return Math.pow(d.views, 0.25 + NODE_MIN_SIZE})
+        .attr("r", function(d) { return Math.pow(d.views, 0.25)/3 + NODE_MIN_SIZE})
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; })
 //        .style("opacity", function(d) {return videos[d.id].accessibility})
