@@ -190,7 +190,7 @@ function ticked() {
         });
 
     node
-        .attr("r", function(d) { return d.views})
+        .attr("r", function(d) { return d.views*0.1})
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; })
 //        .style("opacity", function(d) {return videos[d.id].accessibility})
