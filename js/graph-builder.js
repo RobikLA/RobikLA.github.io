@@ -2,10 +2,10 @@
  * Created by Guillaume on 8/13/16.
  */
 
-var MIN_NUMBER_OF_LIKES = 100;
+var MIN_NUMBER_OF_LIKES = 10;
 
 // Minimum size of the nodes so we can see them.
-var NODE_MIN_SIZE = 10;
+var NODE_MIN_SIZE = 2;
 var videos = {};
 var video_list = [];
 var node, link;
