@@ -5,7 +5,7 @@
 var MIN_NUMBER_OF_LIKES = 1;
 
 // Minimum size of the nodes so we can see them.
-var NODE_MIN_SIZE = 4;
+var NODE_MIN_SIZE = 1.2;
 var videos = {};
 var video_list = [];
 var node, link;
@@ -74,7 +74,7 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 function get_size(d) {
-    return parseInt(1000 * Math.sqrt(d.size)) + NODE_MIN_SIZE;
+    return parseInt(1000 * Math.sqrt(d.views)) + NODE_MIN_SIZE;
 }
 
 function get_color(d) {
