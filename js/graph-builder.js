@@ -190,7 +190,7 @@ function ticked() {
         });
 
     node
-        .attr("r", function(d) { return Math.pow(d.views, 0.4) * NODE_MIN_SIZE})
+        .attr("r", function(d) { return Math.pow(d.views, 0.8) * NODE_MIN_SIZE})
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; })
 //        .style("opacity", function(d) {return videos[d.id].accessibility})
